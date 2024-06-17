@@ -37,10 +37,8 @@ tasks.register("checkFileExist") {
 
 tasks.register("checkFileNotEmpty") {
     doLast {
-        if (minMarkForScholarshipFile.length() == 0L) {
-            val writer = BufferedWriter(FileWriter(minMarkForScholarshipFile))
-            writer.use { it.write("80") }
-        }
+        if (minMarkForScholarshipFile.length() == 0L)
+            minMarkForScholarshipFile.writeText("80")
     }
 }
 
