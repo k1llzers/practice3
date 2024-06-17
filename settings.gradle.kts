@@ -3,3 +3,4 @@ plugins {
 }
 rootProject.name = "practice3"
 include("marks-control-models")
+include("marks-control-average")
